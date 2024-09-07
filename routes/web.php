@@ -6,7 +6,13 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\HotelController; 
 
 
+<<<<<<< HEAD
 Route::get('/', [HomeController::class, 'index']);
+=======
+
+Route::get('/', [HomeController::class, 'index']);
+
+>>>>>>> 501a867f97dae9db321552769e04c8813ace0cbb
 
 
 Route::get('/home', [AdminController::class, 'index'])->name('home');
