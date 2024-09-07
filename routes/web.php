@@ -6,7 +6,7 @@ use App\Http\Controllers\HomeController;
 
 
 
-Route::get('/', [HomeController::class, 'index'])->name('');
+Route::get('/', [HomeController::class, 'index']);
 
 
 
