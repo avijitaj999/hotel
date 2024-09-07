@@ -11,19 +11,14 @@ use App\Models\user;
 class AdminController extends Controller
 {
     public function index()
-{
-    
+    {
+
         $usertype = Auth::user()->usertype;
-         
-        if($usertype == 'user') {
-            return view('Dashboard');
-        } 
-      
-        else if($usertype == 'admin') {
+        if ($usertype == 'user') {
+            return view('home.index');
+        } else if ($usertype == 'admin') {
             return view('admin.index');
-        } 
-       
-        else {
+        } else {
             return redirect()->back();
         }
     }

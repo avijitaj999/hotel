@@ -99,6 +99,28 @@
                                     </div>
                                 </div>
                                 <a href="contact.html" class="nav-item nav-link">Contact</a>
+
+
+
+                                @if (Route::has('login'))
+
+                                @auth
+                                <x-app-layout>
+
+                                </x-app-layout>
+                                @else
+                                <a href="{{url('login')}}" class="nav-item nav-link">login</a>
+
+                                @if (Route::has('register'))
+                                <a href="{{url('register')}}" class="nav-item nav-link">Register</a>
+
+                                @endif
+                                @endauth
+
+                                @endif
+
+
+
                             </div>
                             <a href="https://htmlcodex.com/hotel-html-template-pro"
                                 class="btn btn-info rounded-0 py-4 px-md-5 d-none d-lg-block">Premium Version<i
